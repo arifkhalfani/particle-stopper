@@ -3,7 +3,6 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-from scipy.integrate import odeint
 
 #conversion
 MeV = 1.6*10**-13
