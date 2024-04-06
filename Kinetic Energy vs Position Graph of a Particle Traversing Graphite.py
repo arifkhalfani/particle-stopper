@@ -22,13 +22,14 @@ alpha = 1/137                       #fine structure constant
 c1 = (e**2/(4*math.pi*eps_0))**2
 
 #settings
-T0 = 3000*MeV                       #kinetic energy of one particle (3000 for electron beam, 15000 for proton beam)
+E0 = 3000*MeV                       #energy of one particle (3000 for electron beam, 15000 for proton beam)
 m = 0.511*MeV/(c**2)                #mass of particle (0.511 for electrons, 938.27 for protons) 
 z = 1                               #absolute charge of particle (in e)
 x = np.linspace(0, 0.2, 10000)      #distance travelled by particle (in m)
 
 #initial values
 E_p = m*c**2                        #rest energy of particle
+T0 = E0 - E_p                       #initial kinetic energy
 gamma0 = T0/(E_e) + 1               #lorentz factor
 beta0 = math.sqrt(1-1/gamma0**2)    #v/c
 
